@@ -1,0 +1,727 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+$red: #F94F4F;
+$black: #191921;
+$white: #fff;
+$textColor: #000;
+
+body {
+    font: 400 18px/2 'Commissioner', sans-serif;
+    margin: 0;
+    color: $textColor;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4.4em;
+    font-weight: 800;
+    line-height: 1.1em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3.1em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.1em;
+    font-weight: 800;
+    line-height: 1.15em;
+    margin: 0;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.hamburger {
+    display: none;
+}
+
+.btn {
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    font-weight: 800;
+    color: $white;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity .3s ease;
+
+    &-black {
+        background: $black;
+    }
+    &-red {
+        background: $red;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+} 
+
+.btn-link {
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    font-weight: 800;
+    color: $red;
+    border-bottom: 2px solid $red;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity .3s ease;
+    padding: 0;
+    font-size: .88em;
+    padding-bottom: 8px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.wave {
+    position: absolute;
+    top: calc(10% + 140px);
+    left: calc(50% - 51px);
+    width: 135px;
+    height: 61px;
+    z-index: 1;
+}
+
+header {
+    height: 178px;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        margin: 15px 0 0 11.5%;
+    }
+
+    nav {
+        background: $red;
+        width: 49%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 100%;
+        padding: 0 0 0 4.8%;
+
+        a {
+            color: $white;
+            margin: 0 5.2% 0 0;
+            font-size: 0.88em;
+            &:hover {
+                font-weight: 600;
+            }
+        }
+
+        .btn {
+            height: 64px;
+            line-height: 64px;
+            width: 31%;
+            margin-left: 18px;
+            font-size: 0.88em;
+        }
+    }
+}
+
+// section branding
+
+.branding {
+    padding: 0 0 160px;
+    background: url(../assets/desktop/image-hero.jpg) no-repeat top right;
+
+    .width50 {
+        padding: 113px 0 0 11.5%;
+    }
+
+    h1 {
+        margin-bottom: 50px;
+    }
+
+    p {
+        margin-bottom: 48px;
+        line-height: 1.8em;
+    }
+
+    .btn {
+        height: 72px;
+        line-height: 72px;
+        width: 177px;
+    }
+}
+
+// section design 
+
+.design {
+    position: relative;
+    .wave {
+        background: url(../assets/desktop/bg-pattern-wave-red.svg) no-repeat;
+    }
+    &-bg {
+        background: url(../assets/desktop/image-strategic.jpg);
+        background-size: cover;
+        width: 51%;
+    }
+
+    &-text {
+        width: 49%;
+        background: $black;
+        color: $white;
+        padding: 14% 8% 28% 11%;
+    }
+
+    h2 {
+        margin-bottom: 43px;
+        span {
+            color: $red;
+        }
+    }
+
+    p {
+        margin-bottom: 41px;
+        line-height: 1.8em;
+    }
+}
+
+// section strategy
+
+.strategy {
+    position: relative;
+    padding: 192px 6% 142px 10%;
+    margin-top: -203px;
+    &-bg {
+        position: absolute;
+        background: $red;
+        left: 38%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .left {
+        position: relative;
+        z-index: 2;
+        padding: 206px 0 0 2%;
+    }
+
+    .right {
+        color: $white;
+        padding: 0 0 0 5px;
+        ul {
+            margin: 7px 0 0;
+            li {
+                margin: 0 0 53px;
+                position: relative;
+                padding: 30px 20px 0px 39px;
+                h1 {
+                    position: absolute;
+                    z-index: 2;
+                    left: 18px;
+                    top: 0;
+                    opacity: 0.25;
+                }
+
+            }
+        }
+    }
+    &-text {
+        position: relative;
+        z-index: 3;
+        margin: 13px 0 0 40px;
+    }
+    &-title {
+        font-size: 1.1em;
+        font-weight: 800;
+        margin-bottom: 18px;
+    }
+    p {
+        line-height: 1.9em;
+    }
+}
+
+// section slider
+
+.slider {
+    color: $white;
+    position: relative;
+    .wave {
+        background: url(../assets/desktop/bg-pattern-wavy-white.svg) no-repeat;
+        z-index: 2;
+        left: calc(50% - 100px);
+    }
+    &-main-title {
+        background: $black;
+        min-height: 528px;
+        justify-content: center;
+        padding: 0 14% 0 24%;
+        h2 {
+            margin-bottom: 56px;
+        }
+    }
+    .left {
+        width: 53%;
+        padding: 0 0 100px;
+        position: relative;
+        z-index: 1;
+    }
+    .right {
+        width: 69%;
+        margin-left: -10%;
+        .slide {
+            height: 728px;
+            background-size: cover;
+            position: relative;
+            .text {
+                position: absolute;
+                bottom: 66px;
+                right: 153px;
+                text-align: right;
+            }
+        }
+    }
+    .slide {
+        display: none;
+        &-title {
+            font-weight: 800;
+            margin-top: -4px;
+            letter-spacing: 1px;
+        }
+    }
+    &-btn {
+        width: 40px;
+        height: 40px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        &-left {
+            background: url(../assets//desktop/icon-arrow-previous.svg) no-repeat;
+            margin: 0 16px 0 3px;
+        }
+        &-right {
+            background: url(../assets//desktop/icon-arrow-next.svg) no-repeat;
+        }
+    }
+}
+
+footer {
+    position: relative;
+    align-items: center;
+    padding: 118px 11.5%;
+    justify-content: space-between;
+    .wave {
+        background: url(../assets/desktop/bg-pattern-wave-red.svg) no-repeat;
+        top: 154px;
+        left: -67px;
+    }
+    h2 {
+        max-width: 635px;
+    }
+    .btn {
+        height: 64px;
+        width: 199px;
+        line-height: 64px;
+        font-size: 0.8em;
+    }
+}
+
+
+
+// media for tablet
+
+@media only screen and (max-width: 1024px) {
+    .btn {
+        font-size: 1.2em;
+    }
+    h1 {
+        font-size: 3.6em;
+        line-height: 1.06em;
+        letter-spacing: 1px;
+    }
+    h2 {
+        font-size: 2.13em;
+    }
+    body {
+        font-size: 15px;
+    }
+    .btn-link {
+        font-size: 0.9em;
+    }
+
+    .wave {
+        top: calc(10% + 80px);
+        left: calc(50% - 40px);
+        width: 66px;
+        height: 30px;
+        background-size: cover;
+    }
+
+    header {
+        .logo {
+            margin: 10px 0 0 5%;
+        }
+        nav {
+            width: 57%;
+            padding-left: 4.4%;
+            a {
+                margin-right: 6.4%;
+            }
+            .btn {
+                width: 36%;
+                margin-left: 2%;
+                font-size: 1em;
+            }
+        }
+    }
+
+    .branding {
+        padding-bottom: 150px;
+        background-image: url(../assets/tablet/image-hero.jpg);
+        .width50 {
+            padding: 77px 0 0 5%;
+            width: 57%;
+        }
+        h1 {
+            margin-bottom: 27px;
+        }
+        p {
+            margin-bottom: 28px;
+        }
+    }
+
+    .design {
+        .wave {
+            background-size: cover;
+        }
+        &-bg {
+            width: 49%;
+            background-image: url(../assets/tablet/image-strategic.jpg);
+        }
+        &-text {
+            width: 51%;
+            padding: 16% 6% 31% 9.3%;
+        }
+        h2 {
+            margin-bottom: 32px;
+        }
+        p {
+            line-height: 1.7em;
+            margin-bottom: 26px;
+        }
+    }
+
+    .strategy {
+        margin-top: -117px;
+        padding: 43px 4% 35px 3%;
+        &-bg {
+            left: 43%;
+        }
+        .right {
+            padding: 74px 0 0 4%;
+            ul {
+                padding: 0;
+                li {
+                    margin-bottom: 84px;
+                    padding: 0;
+                    h1 {
+                        left: 16px;
+                        top: -41px;
+                        font-size: 5em;
+                    }
+                }
+            }
+        }
+        &-text {
+            margin: 49px 0 0 30px;
+        }
+        &-title {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 1.7em;
+        }
+    }
+
+    .slider {
+        .wave {
+            left: calc(50% - 23px);
+            background-size: cover;
+        }
+        .left {
+            width: 52%;
+        }
+        &-main-title {
+            min-height: 352px;
+            padding: 0 10%;
+            h2 {
+                margin-bottom: 32px;
+            }
+        }
+        .right {
+            width: 58%;
+            margin-left: -8%;
+            .slide {
+                height: 471px;
+                .text {
+                    bottom: 39px;
+                    right: 40px;
+                }
+                &-title {
+                    margin-top: 0;
+                    letter-spacing: inherit;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 73px 5.2%;
+        h2 {
+            max-width: 58%;
+        }
+        .btn {
+            font-size: 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .btn {
+        font-size: 1.2em;
+    }
+    h1 {
+        font-size: 2.6em;
+    }
+    h2 {
+        font-size: 2.13em;
+    }
+    body {
+        font-size: 15px;
+    }
+    .btn-link {
+        font-size: 0.9em;
+    }
+
+    p {
+        line-height: 1.7em;
+    }
+
+    .wave {
+        top: calc(17% + 80px);
+        left: 24px;
+        width: 66px;
+        height: 30px;
+        background-size: cover;
+    }
+
+    header {
+        height: 110px;
+        position: relative;
+        .logo {
+            margin-left: 6%;
+        }
+        nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 110px;
+            right: 20px;
+            width: 252px;
+            background: $black;
+            height: 250px;
+            padding: 10px 0;
+            &.active {
+                display: flex;
+            }
+            .btn {
+                background: $red;
+                width: 199px;
+            }
+            a {
+                font-size: 1.1em;
+                margin: 0 0 20px;
+            }
+        }
+        .hamburger {
+            margin-right: 20px;
+            display: block;
+            border: 0;
+            outline: 0;
+            background: transparent;
+
+            span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                margin-bottom: 5px;
+                position: relative;
+                z-index: 1;
+                background: $black;
+                transition: transform .3s ease-in-out,
+                            opacity .3s ease-in-out;
+            }
+            &.active {
+                span {
+                    opacity: 1;
+                    transform: rotate(-45deg) translate(5px, -8px);
+                    &:nth-last-child(3) {
+                        opacity: 0;
+                        transform: rotate(0deg) scale(.2, .2);
+                    }
+                    &:nth-last-child(2) {
+                        transform: rotate(45deg) translate(-3px, -1px);
+                    }
+                }
+            }
+        }
+    }
+
+    .branding {
+        background: url(../assets/mobile/image-hero.jpg) no-repeat;
+        background-size: contain;
+        padding-bottom: 96px;
+        .width50 {
+            padding: 68% 0 0 6%;
+            width: 100%;
+        }
+        h1 {
+            margin-bottom: 22px;
+        }
+        p {
+            margin-bottom: 41px;
+            line-height: 1.7em;
+        }
+    }
+
+    .design {
+        flex-flow: column;
+        &-bg {
+            width: 100%;
+            background-image: url(../assets/mobile/image-strategic.jpg);
+            height: 200px;
+        }
+        &-text {
+            width: 100%;
+            padding: 20% 4% 20% 7%;
+        }
+        h2 {
+            font-size: 2em;
+            letter-spacing: .7px;
+            margin-bottom: 25px;
+        }
+        p {
+            margin-bottom: 33px;
+        }
+    }
+
+    .strategy {
+        margin-top: 0;
+        flex-flow: column;
+        padding: 43px 4% 10px 3%;
+        &-bg {
+            left: 0;
+        }
+        .left {
+            padding: 56px 4% 0;
+            h2 {
+                color: $white;
+            }
+        }
+        .right {
+            padding: 46px 3% 0 0%;
+        }
+    }
+
+    .slider {
+        flex-direction: column-reverse;
+        .wave {
+            display: none;
+        }
+        .left {
+            width: 100%;
+        }
+        .right {
+            width: 100%;
+            margin: 0;
+            .slide {
+                height: 405px;
+                .text {
+                    bottom: 30px;
+                    right: 32px;
+                }
+                &-title {
+                    margin-bottom: -3px;
+                }
+            }
+        }
+        &-main-title {
+            padding: 0 6%;
+            min-width: 273px;
+            h2 {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    footer {
+        flex-direction: column;
+        padding: 21px 6.4%;
+        align-items: baseline;
+        .wave {
+            display: none;
+        }
+        h2 {
+            margin-bottom: 50px;
+            max-width: 100%;
+        }
+    }
+
+    
+}
